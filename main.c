@@ -1,7 +1,13 @@
-#include <stdio.h>
+#include "raylib.h"
 
 int main() {
-    printf("Hello, World!\n");
-    printf("C is running successfully in VS Code.\n");
+    InitWindow(800, 450, "raylib works!");
+    while (!WindowShouldClose()) {
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+        DrawText("It works!", 350, 200, 20, BLACK);
+        EndDrawing();
+    }
+    CloseWindow();
     return 0;
 }
